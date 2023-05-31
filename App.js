@@ -7,7 +7,6 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { AuthBg } from "./assets/imgs/RegistrationPage/AuthBG.jpg";
 import { RegistrationPage } from "./src/components/RegistrationPage/RegristrationPage";
 
 export default function App() {
@@ -24,6 +23,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 16,
   },
 });
