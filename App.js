@@ -1,18 +1,21 @@
-import { StatusBar } from "expo-status-bar";
-import {
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 import { RegistrationPage } from "./src/components/RegistrationPage/RegristrationPage";
+import { useFonts } from "expo-font";
+import { LoginPage } from "./src/components/LoginPage/LoginPage";
 
 export default function App() {
+  const [fontLoaded] = useFonts({
+    roboto: require("./src/assets/fonts/Roboto-Medium.ttf"),
+  });
+
+  if (!fontLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
-      <RegistrationPage />
+      {/* <RegistrationPage /> */}
+      <LoginPage />
     </View>
   );
 }

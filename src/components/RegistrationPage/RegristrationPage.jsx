@@ -1,20 +1,21 @@
 import {
   Dimensions,
-  Image,
   ImageBackground,
+  Keyboard,
+  KeyboardAvoidingView,
   Pressable,
   StyleSheet,
   Text,
   TextInput,
+  TouchableWithoutFeedback,
   View,
 } from "react-native";
 import colors from "../../constatns/colors/colors";
-import { Formik } from "formik";
 import Add from "../../assets/svg/addPhotoSvg";
 
 export const RegistrationPage = () => {
   return (
-    <>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground
         source={require("../../assets/imgs/RegistrationPage/auth-bg.jpg")}
         style={styles.bgImage}
@@ -25,34 +26,22 @@ export const RegistrationPage = () => {
             <Add style={styles.svg} />
           </View>
           <Text style={styles.registrationText}>Реєстрація</Text>
-          <Formik initialValues={{ userName: "", email: "", password: "" }}>
-            {({ values }) => (
-              <View style={styles.formContainer}>
-                <TextInput
-                  style={styles.input}
-                  value={values.userName}
-                  placeholder="Логін"
-                />
-                <TextInput
-                  style={styles.input}
-                  value={values.email}
-                  placeholder="Адресса електороної почти"
-                />
-                <TextInput
-                  style={styles.input}
-                  value={values.password}
-                  placeholder="Пароль"
-                />
-                <Pressable style={styles.button}>
-                  <Text style={styles.text}>Зареєструватися</Text>
-                </Pressable>
-              </View>
-            )}
-          </Formik>
+          <View style={styles.formContainer}>
+            <TextInput style={styles.input} placeholder="Логін" />
+            <TextInput
+              style={styles.input}
+              placeholder="Адресса електороної почти"
+            />
+            <TextInput style={styles.input} placeholder="Пароль" />
+
+            <Pressable style={styles.button}>
+              <Text style={styles.text}>Зареєструватися</Text>
+            </Pressable>
+          </View>
           <Text style={styles.loginLink}>Вже є аккаунт? Увійти</Text>
         </View>
       </ImageBackground>
-    </>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -63,9 +52,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#F6F6F6",
     borderWidth: 1,
     borderRadius: 8,
+    borderColor: colors.grayBorder,
     padding: 16,
   },
   registrationText: {
+    fontFamily: "roboto",
+    fontWeight: 500,
+
+    fontSize: 30,
+    lineHeight: 35,
     marginTop: 92,
   },
   button: {
@@ -77,7 +72,12 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     width: "100%",
   },
-
+  keyboardAvoidingView: {
+    width: "100%",
+    display: "flex",
+    gap: 16,
+    marginBottom: 27,
+  },
   text: {
     fontFamily: "Roboto",
     fontStyle: "normal",
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 16,
     display: "flex",
-    gap: 10,
+    gap: 16,
   },
 
   bgImage: {
@@ -131,5 +131,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 14,
     right: -12,
+  },
+
+  loginLink: {
+    color: colors.blueTextColor,
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 16,
+    lineHeight: 19,
   },
 });
