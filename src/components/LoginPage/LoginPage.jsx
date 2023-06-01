@@ -37,7 +37,7 @@ export const LoginPage = () => {
               <Text style={styles.text}>Увійти</Text>
             </Pressable>
           </View>
-          <Text style={styles.loginLink}>Немає аккаунту? Зареєструватися</Text>
+          <Text style={styles.loginLink}>Немає акаунту? Зареєструватися</Text>
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>
@@ -69,7 +69,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.orangeMain,
     paddingVertical: 16,
     width: "100%",
-    marginTop: 27,
+  },
+  keyboardAvoidingView: {
+    width: "100%",
+    display: "flex",
+    gap: 16,
+    marginBottom: 27,
   },
   text: {
     fontFamily: "Roboto",
