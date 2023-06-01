@@ -65,19 +65,14 @@ const styles = StyleSheet.create({
   },
   button: {
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     borderRadius: 50,
     backgroundColor: colors.orangeMain,
     paddingVertical: 16,
     width: "100%",
+    marginTop: 27,
   },
-  keyboardAvoidingView: {
-    width: "100%",
-    display: "flex",
-    gap: 16,
-    marginBottom: 27,
-  },
+
   text: {
     fontFamily: "Roboto",
     fontStyle: "normal",

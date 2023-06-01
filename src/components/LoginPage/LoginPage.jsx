@@ -21,31 +21,24 @@ export const LoginPage = () => {
         style={styles.bgImage}
         resizeMode={"cover"}
       >
-        <KeyboardAvoidingView // визначаємо ОС та налаштовуємо поведінку клавіатури
-          behavior={Platform.OS == "ios" ? "padding" : "height"}
-        >
-          <View style={styles.globalContainer}>
-            <View style={styles.photoPlaceholder}>
-              <Add style={styles.svg} />
-            </View>
-
-            <Text style={styles.registrationText}>Увійти</Text>
-            <View style={styles.formContainer}>
-              <TextInput
-                style={styles.input}
-                placeholder="Адресса електороної почти"
-              />
-              <TextInput style={styles.input} placeholder="Пароль" />
-
-              <Pressable style={styles.button}>
-                <Text style={styles.text}>Увійти</Text>
-              </Pressable>
-            </View>
-            <Text style={styles.loginLink}>
-              Немає аккаунту? Зареєструватися
-            </Text>
+        <View style={styles.globalContainer}>
+          <View style={styles.photoPlaceholder}>
+            <Add style={styles.svg} />
           </View>
-        </KeyboardAvoidingView>
+          <Text style={styles.registrationText}>Увійти</Text>
+          <View style={styles.formContainer}>
+            <TextInput
+              style={styles.input}
+              placeholder="Адресса електороної почти"
+            />
+            <TextInput style={styles.input} placeholder="Пароль" />
+
+            <Pressable style={styles.button}>
+              <Text style={styles.text}>Увійти</Text>
+            </Pressable>
+          </View>
+          <Text style={styles.loginLink}>Немає аккаунту? Зареєструватися</Text>
+        </View>
       </ImageBackground>
     </TouchableWithoutFeedback>
   );
@@ -71,18 +64,12 @@ const styles = StyleSheet.create({
   },
   button: {
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     borderRadius: 50,
     backgroundColor: colors.orangeMain,
     paddingVertical: 16,
     width: "100%",
-  },
-  keyboardAvoidingView: {
-    width: "100%",
-    display: "flex",
-    gap: 16,
-    marginBottom: 27,
+    marginTop: 27,
   },
   text: {
     fontFamily: "Roboto",
@@ -102,6 +89,7 @@ const styles = StyleSheet.create({
 
   bgImage: {
     display: "flex",
+    flex: 1,
     height: "100%",
     width: "100%",
     justifyContent: "flex-end",
