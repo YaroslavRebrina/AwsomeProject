@@ -3,6 +3,7 @@ import {
   ImageBackground,
   Keyboard,
   KeyboardAvoidingView,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -26,7 +27,11 @@ export const RegistrationPage = () => {
             <Add style={styles.svg} />
           </View>
           <Text style={styles.registrationText}>Реєстрація</Text>
-          <View style={styles.formContainer}>
+          <KeyboardAvoidingView
+            style={styles.formContainer}
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            keyboardVerticalOffset={120}
+          >
             <TextInput style={styles.input} placeholder="Логін" />
             <TextInput
               style={styles.input}
@@ -37,7 +42,7 @@ export const RegistrationPage = () => {
             <Pressable style={styles.button}>
               <Text style={styles.text}>Зареєструватися</Text>
             </Pressable>
-          </View>
+          </KeyboardAvoidingView>
           <Text style={styles.loginLink}>Вже є аккаунт? Увійти</Text>
         </View>
       </ImageBackground>
@@ -95,6 +100,9 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
     justifyContent: "flex-end",
+    position: "absolute",
+    top: 0,
+    left: 0,
   },
 
   globalContainer: {

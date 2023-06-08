@@ -15,9 +15,9 @@ export default function App() {
 
   return (
     <>
-      {/* <RegistrationPage /> */}
-      {/* <LoginPage /> */}
-      <PostsScreen />
+      <RegistrationPage />
+      {/* <LoginPage />
+      <PostsScreen /> */}
     </>
   );
 }
