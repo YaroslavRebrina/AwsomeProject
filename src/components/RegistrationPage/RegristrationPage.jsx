@@ -13,8 +13,17 @@ import {
 } from "react-native";
 import colors from "../../constatns/colors/colors";
 import Add from "../../assets/svg/addPhotoSvg";
+import { useState } from "react";
 
 export const RegistrationPage = () => {
+  const [login, setLogin] = useState("");
+  const [email, setEmail] = useState("");
+  const [passwordVisibility, setPasswordVisibility] = useState(true);
+
+  onSubmit = () => {
+    alert(`login:${login}, email:${email}`);
+  };
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground
@@ -32,14 +41,26 @@ export const RegistrationPage = () => {
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             keyboardVerticalOffset={120}
           >
-            <TextInput style={styles.input} placeholder="Логін" />
+            <TextInput
+              style={styles.input}
+              placeholder="Логін"
+              value={login}
+              onChangeText={setLogin}
+            />
             <TextInput
               style={styles.input}
               placeholder="Адресса електороної почти"
+              value={email}
+              onChangeText={setEmail}
             />
-            <TextInput style={styles.input} placeholder="Пароль" />
+            <TouchableOpacity
+              style={styles.showPasswordButton}
+              onPress={() => setPasswordVisibility(!passwordVisibility)}
+            >
+              <Text>Показать</Text>
+            </TouchableOpacity>
 
-            <Pressable style={styles.button}>
+            <Pressable style={styles.button} onPress={onSubmit}>
               <Text style={styles.text}>Зареєструватися</Text>
             </Pressable>
           </KeyboardAvoidingView>
@@ -143,5 +164,11 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     fontSize: 16,
     lineHeight: 19,
+  },
+
+  showPasswordButton: {
+    position: "absolute",
+    top: 15,
+    right: 15,
   },
 });

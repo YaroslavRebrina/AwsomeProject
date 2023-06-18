@@ -7,13 +7,21 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from "react-native";
 import colors from "../../constatns/colors/colors";
 import Add from "../../assets/svg/addPhotoSvg";
+import { useState } from "react";
 
 export const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [passwordVisibility, setPasswordVisibility] = useState(true);
+
+  onSubmit = () => {
+    alert(`email:${email}`);
+  };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground
@@ -30,10 +38,24 @@ export const LoginPage = () => {
             <TextInput
               style={styles.input}
               placeholder="Адресса електороної почти"
+              value={email}
+              onChangeText={setEmail}
             />
-            <TextInput style={styles.input} placeholder="Пароль" />
+            <View style={styles.passwordBox}>
+              <TextInput
+                style={styles.input}
+                placeholder="Пароль"
+                secureTextEntry={passwordVisibility}
+              />
+              <TouchableOpacity
+                style={styles.showPasswordButton}
+                onPress={() => setPasswordVisibility(!passwordVisibility)}
+              >
+                <Text>Показать</Text>
+              </TouchableOpacity>
+            </View>
 
-            <Pressable style={styles.button}>
+            <Pressable style={styles.button} onPress={() => onSubmit()}>
               <Text style={styles.text}>Увійти</Text>
             </Pressable>
           </View>
@@ -138,5 +160,15 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     fontSize: 16,
     lineHeight: 19,
+  },
+
+  passwordBox: {
+    position: "relative",
+  },
+
+  showPasswordButton: {
+    position: "absolute",
+    top: 15,
+    right: 15,
   },
 });
