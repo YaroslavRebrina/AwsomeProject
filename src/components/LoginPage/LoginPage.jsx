@@ -47,12 +47,12 @@ export const LoginPage = () => {
                 placeholder="Пароль"
                 secureTextEntry={passwordVisibility}
               />
-              <TouchableOpacity
+              <Text
                 style={styles.showPasswordButton}
                 onPress={() => setPasswordVisibility(!passwordVisibility)}
               >
-                <Text>Показать</Text>
-              </TouchableOpacity>
+                Показать
+              </Text>
             </View>
 
             <Pressable style={styles.button} onPress={() => onSubmit()}>

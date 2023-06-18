@@ -53,12 +53,19 @@ export const RegistrationPage = () => {
               value={email}
               onChangeText={setEmail}
             />
-            <TouchableOpacity
-              style={styles.showPasswordButton}
-              onPress={() => setPasswordVisibility(!passwordVisibility)}
-            >
-              <Text>Показать</Text>
-            </TouchableOpacity>
+            <View style={styles.passwordBox}>
+              <TextInput
+                style={styles.input}
+                placeholder="Пароль"
+                secureTextEntry={passwordVisibility}
+              />
+              <Text
+                style={styles.showPasswordButton}
+                onPress={() => setPasswordVisibility(!passwordVisibility)}
+              >
+                Показать
+              </Text>
+            </View>
 
             <Pressable style={styles.button} onPress={onSubmit}>
               <Text style={styles.text}>Зареєструватися</Text>
@@ -170,5 +177,9 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 15,
     right: 15,
+  },
+
+  passwordBox: {
+    position: "relative",
   },
 });
