@@ -3,6 +3,8 @@ import { RegistrationPage } from "./src/components/RegistrationPage/Regristratio
 import { useFonts } from "expo-font";
 import { LoginPage } from "./src/components/LoginPage/LoginPage";
 import { PostsScreen } from "./src/components/PostsScreen/PostsScreen";
+import { registerRootComponent } from "expo";
+import { CommentsScreen } from "./src/components/CommentsScreen/CommentsScreen";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -16,8 +18,11 @@ export default function App() {
   return (
     <>
       {/* <RegistrationPage /> */}
-      <LoginPage />
+      {/* <LoginPage /> */}
       {/* <PostsScreen /> */}
+      <CommentsScreen />
     </>
   );
 }
+
+registerRootComponent(App);
