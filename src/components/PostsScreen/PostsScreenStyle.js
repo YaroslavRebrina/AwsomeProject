@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import colors from "../../constatns/colors/colors";
 export const styles = StyleSheet.create({
   constainer: {
+    paddingHorizontal: 16,
     flex: 1,
   },
   header: {
@@ -35,6 +36,8 @@ export const styles = StyleSheet.create({
     paddingTop: 9,
     paddingHorizontal: 90,
     paddingBottom: 42,
+    backgroundColor: colors.white,
+    alignSelf: "center",
   },
 
   buttonAddPost: {
@@ -42,5 +45,9 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     paddingHorizontal: 29,
     paddingVertical: 14,
+  },
+
+  postScrollView: {
+    flex: 1,
   },
 });
