@@ -7,9 +7,7 @@ export const ArrivedComment = ({ message, date }) => {
 
   return (
     <View style={styles.commentWrapper}>
-      <Image
-        source={require("../../assets/imgs/CommentsScreen/second-user-avatar.png")}
-      />
+      <Image source={require("../../assets/imgs/second-user-avatar.png")} />
       <View style={styles.commentFiller}>
         <Text style={styles.commentText}>{message}</Text>
         <Text style={styles.commentDate}>{date}</Text>

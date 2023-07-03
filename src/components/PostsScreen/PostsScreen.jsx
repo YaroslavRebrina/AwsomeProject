@@ -1,12 +1,11 @@
 import { View, Text, Image, Pressable, ScrollView } from "react-native";
 
-import IconAddPost from "../../assets/svg/iconAddPost";
-import IconGrid from "../../assets/svg/iconGrid";
-import IconUser from "../../assets/svg/iconUser";
+import icons from "../../assets/svg";
 
 import { styles } from "./PostsScreenStyle";
 import { Post } from "../Post/Post.jsx";
 
+const { IconAddPost, IconGrid, IconUser } = icons;
 export const PostsScreen = () => {
   return (
     <View style={styles.constainer}>
@@ -15,7 +14,7 @@ export const PostsScreen = () => {
       </View>
       <View style={styles.userWrapper}>
         <Image
-          source={require("../../../src/assets/imgs/LoginPage/User.jpg")}
+          source={require("../../../src/assets/imgs/User.jpg")}
           style={{ width: 60, height: 60 }}
         />
         <View>
@@ -26,13 +25,13 @@ export const PostsScreen = () => {
       <ScrollView style={styles.postScrollView}>
         <Post
           description={"Ліс"}
-          img={require("../../../src/assets/imgs/PostScreenWithFiller/ForestPicture.jpg")}
+          img={require("../../../src/assets/imgs/ForestPicture.jpg")}
           commentsCount={0}
           location={"Ivano-Frankivs'k Region, Ukraine"}
         ></Post>
         <Post
           description={"Ліс"}
-          img={require("../../../src/assets/imgs/PostScreenWithFiller/ForestPicture.jpg")}
+          img={require("../../../src/assets/imgs/comments-img.jpg")}
           commentsCount={0}
           location={"Ivano-Frankivs'k Region, Ukraine"}
         ></Post>

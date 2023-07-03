@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   },
 
   footer: {
-    position: "absolute",
+    marginTop: 20,
     width: "100%",
     bottom: 0,
     flexDirection: "row",

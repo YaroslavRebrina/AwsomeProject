@@ -7,10 +7,13 @@ import {
   Pressable,
   Dimensions,
 } from "react-native";
-import colors from "../../constatns/colors/colors";
+
 import { ArrivedComment } from "../Comment/ArrivedComment.jsx";
 import { DeliveredComment } from "../Comment/DeliveredComment.jsx";
-import SendComment from "../../assets/svg/sendCommnet";
+import icons from "../../assets/svg";
+import { styles } from "./CommentsScreenStyle";
+
+const { IconSendComment } = icons;
 
 export const CommentsScreen = () => {
   return (
@@ -20,7 +23,7 @@ export const CommentsScreen = () => {
       </View>
       <View style={styles.mainContainer}>
         <Image
-          source={require("../../assets/imgs/CommentsScreen/comments-img.jpg")}
+          source={require("../../assets/imgs/comments-img.jpg")}
           style={styles.img}
         />
         <Image />
@@ -49,75 +52,9 @@ export const CommentsScreen = () => {
           style={styles.commentInput}
         ></TextInput>
         <Pressable style={styles.sendCommentButton}>
-          <SendComment></SendComment>
+          <IconSendComment></IconSendComment>
         </Pressable>
       </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  globalContainer: {
-    flex: 1,
-    paddingHorizontal: 16,
-    alignItems: "center",
-    paddingBottom: 16,
-  },
-
-  mainContainer: {
-    flex: 1,
-    alignItems: "center",
-  },
-
-  commentInput: {
-    height: 50,
-    width: "100%",
-    backgroundColor: colors.gray,
-    borderColor: colors.grayBorder,
-    borderWidth: 1,
-    borderRadius: 100,
-    paddingVertical: 16,
-    paddingLeft: 16,
-    paddingRight: 8,
-  },
-
-  img: {
-    marginVertical: 32,
-    borderRadius: 8,
-  },
-
-  header: {
-    width: "100%",
-    height: 88,
-    alignItems: "center",
-    justifyContent: "flex-end",
-    paddingHorizontal: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.grayBorder,
-  },
-
-  pageTitle: {
-    color: colors.darkTextColor,
-    marginBottom: 11,
-    fontFamily: "roboto",
-    fontWeight: 500,
-
-    fontSize: 17,
-    lineHeight: 22,
-  },
-
-  commentsList: {
-    flex: 1,
-    alignItems: "center",
-  },
-
-  sendCommentButton: {
-    backgroundColor: colors.orangeMain,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    borderRadius: 50,
-    position: "absolute",
-    top: 7,
-    right: 8,
-  },
-});

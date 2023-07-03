@@ -10,10 +10,12 @@ import {
   View,
 } from "react-native";
 
-import Add from "../../assets/svg/addPhotoSvg";
 import { useState } from "react";
 
 import { styles } from "./RegistrationPageStyle";
+import icons from "../../assets/svg";
+
+const { IconAdd } = icons;
 
 export const RegistrationPage = () => {
   const [login, setLogin] = useState("");
@@ -27,13 +29,13 @@ export const RegistrationPage = () => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground
-        source={require("../../assets/imgs/RegistrationPage/auth-bg.jpg")}
+        source={require("../../assets/imgs/auth-bg.jpg")}
         style={styles.bgImage}
         resizeMode={"cover"}
       >
         <View style={styles.globalContainer}>
           <View style={styles.photoPlaceholder}>
-            <Add style={styles.svg} />
+            <IconAdd style={styles.svg} />
           </View>
           <Text style={styles.registrationText}>Реєстрація</Text>
           <KeyboardAvoidingView

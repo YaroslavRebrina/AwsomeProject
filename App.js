@@ -5,6 +5,7 @@ import { LoginPage } from "./src/components/LoginPage/LoginPage";
 import { PostsScreen } from "./src/components/PostsScreen/PostsScreen";
 import { registerRootComponent } from "expo";
 import { CommentsScreen } from "./src/components/CommentsScreen/CommentsScreen";
+import { CreatePostScreen } from "./src/components/CreatePostScreen/CreatePost.jsx";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -19,8 +20,9 @@ export default function App() {
     <>
       {/* <RegistrationPage /> */}
       {/* <LoginPage /> */}
-      <PostsScreen />
+      {/* <PostsScreen /> */}
       {/* <CommentsScreen /> */}
+      <CreatePostScreen />
     </>
   );
 }

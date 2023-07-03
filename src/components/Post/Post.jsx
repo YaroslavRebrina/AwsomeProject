@@ -1,8 +1,8 @@
 import { Image, Text, View } from "react-native";
-import ShowCommnetsIcon from "../../assets/svg/showCommnetsIcon";
-import LocationIcon from "../../assets/svg/locationIcon";
-import { styles } from "./Post";
+import icons from "../../assets/svg/";
 
+import { styles } from "./Post";
+const { IconSendComment, IconLocation } = icons;
 export const Post = ({ img, description, commentsCount, location }) => {
   return (
     <>
@@ -11,11 +11,11 @@ export const Post = ({ img, description, commentsCount, location }) => {
         <Text>{description}</Text>
         <View style={styles.postAdditionalInfoWrapper}>
           <View style={styles.additionalInfo}>
-            <ShowCommnetsIcon />
+            <IconSendComment />
             <Text style={styles.commentsCount}>{commentsCount}</Text>
           </View>
           <View style={styles.additionalInfo}>
-            <LocationIcon />
+            <IconLocation />
             <Text style={styles.locationAddress}>{location}</Text>
           </View>
         </View>

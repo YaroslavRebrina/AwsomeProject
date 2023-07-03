@@ -12,7 +12,7 @@ export const DeliveredComment = ({ message, date }) => {
         <Text style={styles.commentDate}>{date}</Text>
       </View>
       <Image
-        source={require("../../assets/imgs/LoginPage/User.jpg")}
+        source={require("../../assets/imgs/User.jpg")}
         style={styles.avatar}
       />
     </View>

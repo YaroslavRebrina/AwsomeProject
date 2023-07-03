@@ -2,21 +2,18 @@ import {
   Dimensions,
   ImageBackground,
   Keyboard,
-  KeyboardAvoidingView,
   Pressable,
-  StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-import colors from "../../constatns/colors/colors";
-import Add from "../../assets/svg/addPhotoSvg";
-import { useState } from "react";
 
+import { useState } from "react";
 import { styles } from "./LoginPageStyle";
 
+import icons from "../../assets/svg";
+const { IconAdd } = icons;
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [passwordVisibility, setPasswordVisibility] = useState(true);
@@ -27,13 +24,13 @@ export const LoginPage = () => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground
-        source={require("../../assets/imgs/RegistrationPage/auth-bg.jpg")}
+        source={require("../../assets/imgs/auth-bg.jpg")}
         style={styles.bgImage}
         resizeMode={"cover"}
       >
         <View style={styles.globalContainer}>
           <View style={styles.photoPlaceholder}>
-            <Add style={styles.svg} />
+            <IconAdd style={styles.svg} />
           </View>
           <Text style={styles.registrationText}>Увійти</Text>
           <View style={styles.formContainer}>
