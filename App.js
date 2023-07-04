@@ -21,8 +21,8 @@ export default function App() {
       {/* <RegistrationPage /> */}
       {/* <LoginPage /> */}
       {/* <PostsScreen /> */}
-      {/* <CommentsScreen /> */}
-      <CreatePostScreen />
+      <CommentsScreen />
+      {/* <CreatePostScreen /> */}
     </>
   );
 }

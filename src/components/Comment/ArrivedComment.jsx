@@ -19,10 +19,10 @@ export const ArrivedComment = ({ message, date }) => {
 const styles = StyleSheet.create({
   commentWrapper: {
     marginBottom: 24,
-    flex: 1,
+    // flex: 1,
     flexDirection: "row",
     gap: 16,
-    padding: 16,
+    paddingHorizontal: 16,
   },
   commentFiller: {
     padding: 16,

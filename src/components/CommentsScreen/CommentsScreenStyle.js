@@ -3,12 +3,12 @@ import colors from "../../constatns/colors/colors";
 export const styles = StyleSheet.create({
   globalContainer: {
     flex: 1,
-    paddingHorizontal: 16,
     alignItems: "center",
     paddingBottom: 16,
   },
 
   mainContainer: {
+    paddingHorizontal: 16,
     flex: 1,
     alignItems: "center",
   },
@@ -21,8 +21,9 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 100,
     paddingVertical: 16,
+
     paddingLeft: 16,
-    paddingRight: 8,
+    // paddingRight: 8,
   },
 
   img: {
@@ -62,6 +63,6 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     position: "absolute",
     top: 7,
-    right: 8,
+    right: 24,
   },
 });

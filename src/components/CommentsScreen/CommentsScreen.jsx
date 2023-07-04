@@ -46,7 +46,9 @@ export const CommentsScreen = () => {
           />
         </View>
       </View>
-      <View style={{ position: "relative", width: "100%" }}>
+      <View
+        style={{ position: "relative", width: "100%", paddingHorizontal: 16 }}
+      >
         <TextInput
           placeholder="Коментувати..."
           style={styles.commentInput}

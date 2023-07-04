@@ -81,13 +81,13 @@ export const styles = StyleSheet.create({
     gap: 16,
     marginBottom: 120,
   },
-  //"rgb(100, 100, 100, 30)"
+  //
   changePhotoButton: {
     position: "absolute",
     top: 90,
     alignSelf: "center",
     justifyContent: "center",
-    backgroundColor: "#000",
+    backgroundColor: "rgba(225, 225, 225, 0.3)",
     borderRadius: 50,
     paddingHorizontal: 18,
     paddingVertical: 18,
