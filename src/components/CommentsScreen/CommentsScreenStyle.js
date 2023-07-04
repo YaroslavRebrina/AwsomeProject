@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import colors from "../../constatns/colors/colors";
+
+const screenWidth = Dimensions.get("screen").width;
 export const styles = StyleSheet.create({
   globalContainer: {
     flex: 1,
@@ -23,12 +25,12 @@ export const styles = StyleSheet.create({
     paddingVertical: 16,
 
     paddingLeft: 16,
-    // paddingRight: 8,
   },
 
   img: {
-    marginVertical: 32,
     borderRadius: 8,
+    width: screenWidth - 16,
+    height: 240,
   },
 
   header: {

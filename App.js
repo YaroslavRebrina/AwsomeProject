@@ -10,6 +10,7 @@ import { CreatePostScreen } from "./src/components/CreatePostScreen/CreatePost.j
 export default function App() {
   const [fontLoaded] = useFonts({
     roboto: require("./src/assets/fonts/Roboto-Medium.ttf"),
+    robotoRegular: require("./src/assets/fonts/Roboto-Regular.ttf"),
   });
 
   if (!fontLoaded) {
@@ -21,8 +22,8 @@ export default function App() {
       {/* <RegistrationPage /> */}
       {/* <LoginPage /> */}
       {/* <PostsScreen /> */}
-      <CommentsScreen />
-      {/* <CreatePostScreen /> */}
+      {/* <CommentsScreen /> */}
+      <CreatePostScreen />
     </>
   );
 }

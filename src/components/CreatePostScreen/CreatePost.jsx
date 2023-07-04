@@ -13,10 +13,12 @@ export const CreatePostScreen = () => {
       </View>
       <View style={styles.main}>
         <View style={styles.editorPhotoContainer}>
-          <Image
-            styles={styles.img}
-            source={require("../../assets/imgs/ForestPicture.jpg")}
-          ></Image>
+          <View style={{ width: "100%", height: 240, alignItems: "center" }}>
+            <Image
+              styles={styles.loadedImg}
+              source={require("../../assets/imgs/ForestPicture.jpg")}
+            />
+          </View>
           <Text style={styles.editorPhotoText}>Редагувати фото</Text>
           <Pressable style={styles.changePhotoButton}>
             <IconCamera />
@@ -24,7 +26,7 @@ export const CreatePostScreen = () => {
         </View>
         <View style={styles.editorDescriptionContainer}>
           <View>
-            <TextInput style={styles.input}>ліс</TextInput>
+            <TextInput style={styles.input}>Ліс</TextInput>
           </View>
           <View>
             <IconLocation style={styles.iconLocation} />
@@ -33,7 +35,7 @@ export const CreatePostScreen = () => {
             </TextInput>
           </View>
           <Pressable style={styles.publicateButton}>
-            <Text>Опублікувати</Text>
+            <Text style={styles.publicateButtonText}>Опублікувати</Text>
           </Pressable>
         </View>
       </View>

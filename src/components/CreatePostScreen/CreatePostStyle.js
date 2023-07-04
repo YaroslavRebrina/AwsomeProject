@@ -1,11 +1,16 @@
 import { Dimensions, StyleSheet } from "react-native";
 import colors from "../../constatns/colors/colors";
 
+const screenWidth = Dimensions.get("screen").width;
+
 export const styles = StyleSheet.create({
   constainer: {
     position: "relative",
-    paddingHorizontal: 16,
     flex: 1,
+  },
+
+  main: {
+    paddingHorizontal: 16,
   },
 
   header: {
@@ -19,27 +24,36 @@ export const styles = StyleSheet.create({
 
   publicationText: {
     alignSelf: "center",
+
+    fontFamily: "roboto",
+    fontWeight: 500,
+
+    fontSize: 17,
+    lineHeight: 22,
   },
 
   goBackButton: {
     position: "absolute",
     top: 10,
-    left: 0,
+    left: 16,
   },
 
   editorPhotoContainer: {
     position: "relative",
-    alignItems: "center",
     marginBottom: 32,
     gap: 8,
   },
 
   editorPhotoText: {
     alignSelf: "flex-start",
+    fontFamily: "roboto",
+    fontWeight: 400,
+    color: colors.grayCommentDate,
   },
 
-  img: {
-    width: 343,
+  loadedImg: {
+    borderRadius: 8,
+    width: screenWidth - 16,
     height: 240,
   },
 
@@ -47,6 +61,9 @@ export const styles = StyleSheet.create({
     height: 50,
     borderBottomWidth: 1,
     borderBottomColor: colors.grayBorder,
+
+    fontFamily: "roboto",
+    color: colors.darkTextColor,
   },
 
   iconLocation: {
@@ -69,19 +86,19 @@ export const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 27,
     borderRadius: 50,
     backgroundColor: colors.gray,
     paddingVertical: 16,
     width: 70,
     height: 40,
-    marginTop: 27,
   },
 
   editorDescriptionContainer: {
     gap: 16,
     marginBottom: 120,
   },
-  //
+
   changePhotoButton: {
     position: "absolute",
     top: 90,
@@ -91,5 +108,14 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     paddingHorizontal: 18,
     paddingVertical: 18,
+  },
+
+  publicateButtonText: {
+    fontFamily: "robotoRegular",
+
+    fontWeight: 400,
+    color: colors.white,
+    fontSize: 16,
+    lineHeight: 18.75,
   },
 });

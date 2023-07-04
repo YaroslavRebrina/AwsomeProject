@@ -22,11 +22,12 @@ export const CommentsScreen = () => {
         <Text style={styles.pageTitle}>Коментарі</Text>
       </View>
       <View style={styles.mainContainer}>
-        <Image
-          source={require("../../assets/imgs/comments-img.jpg")}
-          style={styles.img}
-        />
-        <Image />
+        <View style={{ width: "100%", height: 240, marginVertical: 32 }}>
+          <Image
+            source={require("../../assets/imgs/comments-img.jpg")}
+            style={styles.img}
+          />
+        </View>
         <View style={styles.commentsList}>
           <ArrivedComment
             message={
