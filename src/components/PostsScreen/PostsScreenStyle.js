@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import colors from "../../constatns/colors/colors";
 export const styles = StyleSheet.create({
   constainer: {
-    paddingHorizontal: 16,
     flex: 1,
   },
   header: {
@@ -15,8 +14,13 @@ export const styles = StyleSheet.create({
   publicationText: {
     alignSelf: "center",
   },
-
+  logOutButton: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+  },
   userWrapper: {
+    marginLeft: 16,
     marginTop: 32,
     display: "flex",
     flexDirection: "row",
@@ -24,30 +28,10 @@ export const styles = StyleSheet.create({
     gap: 8,
   },
 
-  footer: {
-    marginTop: 20,
-    width: "100%",
-    bottom: 0,
-    flexDirection: "row",
-    borderTopWidth: 1,
-    borderTopColor: colors.grayBorder,
-    justifyContent: "space-around",
-    alignItems: "center",
-    paddingTop: 9,
-    paddingHorizontal: 90,
-    paddingBottom: 42,
-    backgroundColor: colors.white,
-    alignSelf: "center",
-  },
-
-  buttonAddPost: {
-    backgroundColor: colors.orangeMain,
-    borderRadius: 20,
-    paddingHorizontal: 29,
-    paddingVertical: 14,
-  },
-
   postScrollView: {
-    flex: 1,
+    paddingTop: 32,
+    paddingHorizontal: 16,
+    gap: 32,
+    paddingBottom: 20,
   },
 });

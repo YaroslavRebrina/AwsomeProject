@@ -6,6 +6,7 @@ import { PostsScreen } from "./src/components/PostsScreen/PostsScreen";
 import { registerRootComponent } from "expo";
 import { CommentsScreen } from "./src/components/CommentsScreen/CommentsScreen";
 import { CreatePostScreen } from "./src/components/CreatePostScreen/CreatePost.jsx";
+import { ProfileScreen } from "./src/components/ProfileScreen/ProfileScreen";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -23,7 +24,8 @@ export default function App() {
       {/* <LoginPage /> */}
       {/* <PostsScreen /> */}
       {/* <CommentsScreen /> */}
-      <CreatePostScreen />
+      {/* <CreatePostScreen /> */}
+      <ProfileScreen />
     </>
   );
 }

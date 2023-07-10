@@ -1,6 +1,6 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
-const IconShowComments = (props) => (
+const IconLogOut = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -12,9 +12,8 @@ const IconShowComments = (props) => (
       stroke="#BDBDBD"
       strokeLinecap="round"
       strokeLinejoin="round"
-      d="M3 11.5a8.38 8.38 0 0 0 .9 3.8 8.5 8.5 0 0 0 7.6 4.7 8.38 8.38 0 0 0 3.8-.9L21 21l-1.9-5.7a8.38 8.38 0 0 0 .9-3.8 8.5 8.5 0 0 0-4.7-7.6 8.38 8.38 0 0 0-3.8-.9H11a8.48 8.48 0 0 0-8 8v.5Z"
-      clipRule="evenodd"
+      d="M10 22H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h5M17 16l4-4-4-4M21 12H9"
     />
   </Svg>
 );
-export default IconShowComments;
+export default IconLogOut;

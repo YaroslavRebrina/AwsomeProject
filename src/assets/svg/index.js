@@ -7,8 +7,15 @@ import IconSendComment from "./IconSendComment";
 import IconAdd from "./IconAddPhotoSvg";
 import IconGoBackArrow from "./IconGoBackArrow";
 import IconTrashCan from "./IconTrashCan";
+import IconShowComments from "./IconShowCommnets";
+import IconLikes from "./IconLikes";
+import IconLogOut from "./IconLogOut";
+import IconDeleteAvatar from "./IconDeleteAvatar";
 
 export default {
+  IconDeleteAvatar,
+  IconLogOut,
+  IconLikes,
   IconCamera,
   IconAddPost,
   IconGrid,
@@ -18,4 +25,5 @@ export default {
   IconAdd,
   IconGoBackArrow,
   IconTrashCan,
+  IconShowComments,
 };

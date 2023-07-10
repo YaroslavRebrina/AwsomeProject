@@ -3,7 +3,11 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     gap: 8,
-    marginTop: 32,
+  },
+
+  reactionsWrapper: {
+    flexDirection: "row",
+    gap: 24,
   },
 
   postAdditionalInfoWrapper: {

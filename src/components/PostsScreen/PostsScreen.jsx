@@ -1,16 +1,19 @@
 import { View, Text, Image, Pressable, ScrollView } from "react-native";
 
-import icons from "../../assets/svg";
-
 import { styles } from "./PostsScreenStyle";
 import { Post } from "../Post/Post.jsx";
+import { Footer } from "../Footer/Footer.jsx";
 
-const { IconAddPost, IconGrid, IconUser } = icons;
+import icons from "../../assets/svg";
+
+const { IconLogOut } = icons;
+
 export const PostsScreen = () => {
   return (
     <View style={styles.constainer}>
       <View style={styles.header}>
         <Text style={styles.publicationText}>Публікації</Text>
+        <IconLogOut style={styles.logOutButton} />
       </View>
       <View style={styles.userWrapper}>
         <Image
@@ -22,7 +25,7 @@ export const PostsScreen = () => {
           <Text>email@example.com</Text>
         </View>
       </View>
-      <ScrollView style={styles.postScrollView}>
+      <ScrollView contentContainerStyle={styles.postScrollView}>
         <Post
           description={"Ліс"}
           img={require("../../../src/assets/imgs/ForestPicture.jpg")}
@@ -36,19 +39,7 @@ export const PostsScreen = () => {
           location={"Ivano-Frankivs'k Region, Ukraine"}
         ></Post>
       </ScrollView>
-      <View style={styles.footer}>
-        <Pressable>
-          <Text>
-            <IconGrid />
-          </Text>
-        </Pressable>
-        <Pressable style={styles.buttonAddPost}>
-          <IconAddPost />
-        </Pressable>
-        <Pressable>
-          <IconUser />
-        </Pressable>
-      </View>
+      <Footer />
     </View>
   );
 };
