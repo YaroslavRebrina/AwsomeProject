@@ -76,10 +76,10 @@ export const RegistrationPage = () => {
             </Pressable>
           </KeyboardAvoidingView>
           <Text style={styles.loginLink}>
-            Вже є аккаунт?
+            Вже є аккаунт? &nbsp;
             <Text
               style={styles.loginLink}
-              onPress={navigation.navigate(loginName)}
+              onPress={() => navigation.navigate(loginName)}
             >
               Увійти
             </Text>

@@ -1,4 +1,3 @@
-import { StyleSheet, View } from "react-native";
 import { RegistrationPage } from "./src/components/RegistrationPage/RegristrationPage";
 import { useFonts } from "expo-font";
 import { LoginPage } from "./src/components/LoginPage/LoginPage";
@@ -10,6 +9,7 @@ import { ProfileScreen } from "./src/components/ProfileScreen/ProfileScreen.jsx"
 import { screenNames } from "./src/constatns";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { feedHeaderStyles } from "./src/components/PostsScreen/PostScreenHeader";
 
 const MainStack = createStackNavigator();
 
@@ -34,13 +34,18 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <MainStack.Navigator initialRouteName={login}>
+      <MainStack.Navigator initialRouteName={loginName}>
         <MainStack.Screen
           name={registrationName}
           component={RegistrationPage}
         />
         <MainStack.Screen name={loginName} component={LoginPage} />
-        <MainStack.Screen name={feedName} component={PostsScreen} />
+        <MainStack.Screen
+          name={feedName}
+          component={PostsScreen}
+          options={feedHeaderStyles}
+          
+        />
         <MainStack.Screen name={commnetsName} component={CommentsScreen} />
         <MainStack.Screen name={createPostName} component={CreatePostScreen} />
         <MainStack.Screen name={profileName} component={ProfileScreen} />

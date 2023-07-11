@@ -64,10 +64,10 @@ export const LoginPage = () => {
             </Pressable>
           </View>
           <Text style={styles.loginLink}>
-            Немає акаунту?
+            Немає акаунту? &nbsp;
             <Text
               style={styles.loginLink}
-              onPress={navigation.navigate(registrationName)}
+              onPress={() => navigation.navigate(registrationName)}
             >
               Зареєструватися
             </Text>

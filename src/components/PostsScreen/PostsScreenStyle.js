@@ -4,19 +4,10 @@ export const styles = StyleSheet.create({
   constainer: {
     flex: 1,
   },
-  header: {
-    paddingHorizontal: 100,
-    paddingVertical: 11,
-    marginTop: 44,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.grayBorder,
-  },
-  publicationText: {
-    alignSelf: "center",
-  },
+
   logOutButton: {
     position: "absolute",
-    top: 10,
+
     right: 10,
   },
   userWrapper: {
