@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import colors from "../../constatns/colors/colors";
+import { colors } from "../../constatns";
 export const styles = StyleSheet.create({
   constainer: {
     flex: 1,

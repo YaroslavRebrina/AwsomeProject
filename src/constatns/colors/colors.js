@@ -7,7 +7,7 @@ const blueTextColor = "#1B4371";
 const grayCommentBg = "rgba(0, 0, 0, 0.03)";
 const darkTextColor = "#212121";
 
-const colors = {
+export const colors = {
   orangeMain,
   white,
   gray,
@@ -17,5 +17,3 @@ const colors = {
   darkTextColor,
   grayCommentDate,
 };
-
-export default colors;

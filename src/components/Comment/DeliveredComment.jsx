@@ -1,5 +1,5 @@
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
-import colors from "../../constatns/colors/colors";
+import { colors } from "../../constatns";
 
 export const DeliveredComment = ({ message, date }) => {
   const width = Dimensions.get("window").width;

@@ -8,18 +8,23 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-
 import { useState } from "react";
 import { styles } from "./LoginPageStyle";
+import { screenNames } from "../../constatns";
+import { useNavigation } from "@react-navigation/native";
 
 import icons from "../../assets/svg";
+
 const { IconAdd } = icons;
+const { registrationName, feedName } = screenNames;
+
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [passwordVisibility, setPasswordVisibility] = useState(true);
+  const navigation = useNavigation();
 
   onSubmit = () => {
-    alert(`email:${email}`);
+    navigation.navigate(feedName);
   };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -58,7 +63,15 @@ export const LoginPage = () => {
               <Text style={styles.text}>Увійти</Text>
             </Pressable>
           </View>
-          <Text style={styles.loginLink}>Немає акаунту? Зареєструватися</Text>
+          <Text style={styles.loginLink}>
+            Немає акаунту?
+            <Text
+              style={styles.loginLink}
+              onPress={navigation.navigate(registrationName)}
+            >
+              Зареєструватися
+            </Text>
+          </Text>
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>

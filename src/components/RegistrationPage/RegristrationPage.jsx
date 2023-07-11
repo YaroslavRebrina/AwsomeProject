@@ -8,23 +8,24 @@ import {
   TextInput,
   TouchableWithoutFeedback,
   View,
-  Image,
 } from "react-native";
-
 import { useState } from "react";
-
+import { useNavigation } from "@react-navigation/native";
 import { styles } from "./RegistrationPageStyle";
+import { screenNames } from "../../constatns";
 import icons from "../../assets/svg";
 
 const { IconAdd } = icons;
+const { loginName, feedName } = screenNames;
 
 export const RegistrationPage = () => {
   const [login, setLogin] = useState("");
   const [email, setEmail] = useState("");
   const [passwordVisibility, setPasswordVisibility] = useState(true);
+  const navigation = useNavigation();
 
   onSubmit = () => {
-    alert(`login:${login}, email:${email}`);
+    navigation.navigate(feedName);
   };
 
   return (
@@ -74,7 +75,15 @@ export const RegistrationPage = () => {
               <Text style={styles.text}>Зареєструватися</Text>
             </Pressable>
           </KeyboardAvoidingView>
-          <Text style={styles.loginLink}>Вже є аккаунт? Увійти</Text>
+          <Text style={styles.loginLink}>
+            Вже є аккаунт?
+            <Text
+              style={styles.loginLink}
+              onPress={navigation.navigate(loginName)}
+            >
+              Увійти
+            </Text>
+          </Text>
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>
