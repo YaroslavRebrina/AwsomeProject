@@ -5,4 +5,5 @@ export const screenNames = {
   commnetsName: "commentsScreen",
   createPostName: "createPostScreen",
   profileName: "profileScreen",
+  homeName: "homeScreen",
 };

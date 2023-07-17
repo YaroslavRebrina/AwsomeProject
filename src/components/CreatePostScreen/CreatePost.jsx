@@ -7,10 +7,6 @@ const { IconGoBackArrow, IconLocation, IconTrashCan, IconCamera } = icons;
 export const CreatePostScreen = () => {
   return (
     <View style={styles.constainer}>
-      <View style={styles.header}>
-        <IconGoBackArrow style={styles.goBackButton} />
-        <Text style={styles.publicationText}>Створити публікацію</Text>
-      </View>
       <View style={styles.main}>
         <View style={styles.editorPhotoContainer}>
           <View style={{ width: "100%", height: 240, alignItems: "center" }}>

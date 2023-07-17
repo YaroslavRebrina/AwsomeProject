@@ -3,9 +3,7 @@ import { useFonts } from "expo-font";
 import { LoginPage } from "./src/components/LoginPage/LoginPage";
 import { PostsScreen } from "./src/components/PostsScreen/PostsScreen";
 import { registerRootComponent } from "expo";
-import { CommentsScreen } from "./src/components/CommentsScreen/CommentsScreen";
-import { CreatePostScreen } from "./src/components/CreatePostScreen/CreatePost.jsx";
-import { ProfileScreen } from "./src/components/ProfileScreen/ProfileScreen.jsx";
+import { HomeScreen } from "./src/components/Home/Home";
 import { screenNames } from "./src/constatns";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -13,14 +11,7 @@ import { feedHeaderStyles } from "./src/components/PostsScreen/PostScreenHeader"
 
 const MainStack = createStackNavigator();
 
-const {
-  registrationName,
-  loginName,
-  feedName,
-  commnetsName,
-  createPostName,
-  profileName,
-} = screenNames;
+const { registrationName, loginName, feedName, homeName } = screenNames;
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -41,14 +32,10 @@ export default function App() {
         />
         <MainStack.Screen name={loginName} component={LoginPage} />
         <MainStack.Screen
-          name={feedName}
-          component={PostsScreen}
-          options={feedHeaderStyles}
-          
+          name={homeName}
+          component={HomeScreen}
+          options={{ headerShown: false }}
         />
-        <MainStack.Screen name={commnetsName} component={CommentsScreen} />
-        <MainStack.Screen name={createPostName} component={CreatePostScreen} />
-        <MainStack.Screen name={profileName} component={ProfileScreen} />
       </MainStack.Navigator>
     </NavigationContainer>
   );

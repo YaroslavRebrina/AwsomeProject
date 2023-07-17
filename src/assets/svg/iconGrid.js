@@ -10,7 +10,7 @@ const IconGrid = (props) => (
   >
     <Path fill="#fff" d="M0 0h24v24H0z" />
     <Path
-      stroke="#212121"
+      stroke={props.focused ? props.color : "#212121"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.8}

@@ -50,7 +50,6 @@ export const ProfileScreen = () => {
             location={"Italy"}
           ></Post>
         </ScrollView>
-        <Footer />
       </View>
     </View>
   );

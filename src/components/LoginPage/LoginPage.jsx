@@ -16,7 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 import icons from "../../assets/svg";
 
 const { IconAdd } = icons;
-const { registrationName, feedName } = screenNames;
+const { registrationName,  homeName } = screenNames;
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ export const LoginPage = () => {
   const navigation = useNavigation();
 
   onSubmit = () => {
-    navigation.navigate(feedName);
+    navigation.navigate(homeName);
   };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

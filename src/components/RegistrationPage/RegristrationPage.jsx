@@ -16,7 +16,7 @@ import { screenNames } from "../../constatns";
 import icons from "../../assets/svg";
 
 const { IconAdd } = icons;
-const { loginName, feedName } = screenNames;
+const { loginName, homeName } = screenNames;
 
 export const RegistrationPage = () => {
   const [login, setLogin] = useState("");
@@ -25,7 +25,7 @@ export const RegistrationPage = () => {
   const navigation = useNavigation();
 
   onSubmit = () => {
-    navigation.navigate(feedName);
+    navigation.navigate(homeName);
   };
 
   return (
